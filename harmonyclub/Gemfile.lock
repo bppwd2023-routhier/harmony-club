@@ -234,7 +234,7 @@ DEPENDENCIES
   capybara
   cssbundling-rails
   debug
-  devise
+  devise (~> 4.8)
   image_processing (>= 1.2)
   jbuilder
   jsbundling-rails

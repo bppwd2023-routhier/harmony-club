@@ -13,8 +13,12 @@
   <body class="background">
     <div class="collapse" id="navbarToggleExternalContent">
         <div class="red p-4">
-            <h5 class="text-white h4">Collapsed content</h5>
-            <span class="text-muted">Toggleable via the navbar brand.</span>
+
+            <% if current_user %>
+            <%= link_to "Sign Out", destroy_user_session_path, data: { turbo_method: :delete }, class: "nav-link" %>
+            <% else %>
+            <%= link_to "Sign In", users_path, class: "nav-link" %>
+            <% end %>
         </div>
     </div>
     <nav class="navbar bg-danger text-uppercase navbar-shrink">
@@ -24,8 +28,13 @@
             </button>
         </div>
     </nav>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+
+    <% if notice %>
+    <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+    <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
     <div class="pageContent mx-5">
         <%= yield %>
     </div>
