@@ -10,9 +10,9 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body>
+  <body class="background">
     <div class="collapse" id="navbarToggleExternalContent">
-        <div class="bg-danger p-4">
+        <div class="red p-4">
             <h5 class="text-white h4">Collapsed content</h5>
             <span class="text-muted">Toggleable via the navbar brand.</span>
         </div>
@@ -26,6 +26,11 @@
     </nav>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <div class="pageContent mx-5">
+        <%= yield %>
+    </div>
+    <div class="red footer">
+        <p>bruh</p>
+    </div>
     </body>
 </html>

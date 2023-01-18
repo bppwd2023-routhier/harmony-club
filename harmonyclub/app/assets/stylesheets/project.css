@@ -1,8 +1,22 @@
 .background {
-    background-color: #0794;
+    background-color: #00075E;
 }
 
-.content {
-    background-color: yellow,
-    margin: 8px;
+.red {
+    background-color: #B22234;
+}
+
+.pageContent {
+    background-color: white;
+}
+
+.footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+div {
+    border: solid black 2px; 
 }
