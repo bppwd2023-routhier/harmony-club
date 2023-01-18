@@ -5,6 +5,10 @@ class PagesController < ApplicationController
     
   end
 
+  def panel 
+
+  end
+
   # GET /pages or /pages.json
   def index
     @pages = Page.all

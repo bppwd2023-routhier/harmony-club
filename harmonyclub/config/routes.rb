@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get "pages/home", as: "home"
+  get "pages/panel", as: "panel"
   resources :sponsors
   resources :photos
   resources :albums
@@ -11,7 +13,6 @@ Rails.application.routes.draw do
     get "users", to: "devise/sessions#new"
   end
   devise_for :users
-  get "pages/home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
