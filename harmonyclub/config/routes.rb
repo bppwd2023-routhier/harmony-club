@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  namespace :web do
+    get 'events/calendar'
+    get 'events/show'
+  end
   get "pages/home", as: "home"
   get "pages/panel", as: "panel"
   resources :sponsors
