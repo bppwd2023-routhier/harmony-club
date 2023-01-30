@@ -22,6 +22,11 @@
   </div>
 
   <div>
+    <%= form.label :featured, style: "display: block" %>
+    <%= form.check_box :featured %>
+  </div>
+
+  <div>
     <%= form.label :eventstart, style: "display: block" %>
     <%= form.datetime_field :eventstart %>
   </div>

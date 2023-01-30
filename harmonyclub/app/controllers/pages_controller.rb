@@ -67,10 +67,6 @@ class PagesController < ApplicationController
 
   def panel
     @user = current_user
-    puts "\n\n\n\n\n\n\n\n\n\n\n\n\n"
-    puts @user
-    puts current_user
-    puts "\n\n\n\n\n\n\n\n\n\n\n\n\n"
   end
 
   private
