@@ -21,6 +21,9 @@ div {
     /* border: solid black 2px; */
 }
 
+.calendar-heading a {
+  text-decoration: none;
+}
 
 .simple-calendar table {
     -webkit-border-horizontal-spacing: 0px;
