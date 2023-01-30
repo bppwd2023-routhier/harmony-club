@@ -21,8 +21,8 @@ div {
     /* border: solid black 2px; */
 }
 
-.simple-calendar {
-  table {
+
+.simple-calendar table {
     -webkit-border-horizontal-spacing: 0px;
     -webkit-border-vertical-spacing: 0px;
     background-color: rgba(0, 0, 0, 0);
@@ -33,11 +33,11 @@ div {
     width: 100%;
   }
 
-  tr {
+.simple-calendar tr {
     border-collapse: collapse;
   }
 
-  th {
+.simple-calendar th {
     padding: 6px;
     border-bottom: 2px solid rgb(221, 221, 221);
     border-collapse: collapse;
@@ -48,7 +48,7 @@ div {
     text-align: left;
   }
 
-  td {
+.simple-calendar td {
     padding: 6px;
     vertical-align: top;
     width: 14%;
@@ -68,34 +68,33 @@ div {
     border-left-width: 1px;
   }
 
-  .day {
+.simple-calendar .day {
     height: 80px;
   }
 
-  .wday-0 {}
-  .wday-1 {}
-  .wday-2 {}
-  .wday-3 {}
-  .wday-4 {}
-  .wday-5 {}
-  .wday-6 {}
+.simple-calendar .wday-0 {}
+.simple-calendar .wday-1 {}
+.simple-calendar .wday-2 {}
+.simple-calendar .wday-3 {}
+.simple-calendar .wday-4 {}
+.simple-calendar .wday-5 {}
+.simple-calendar .wday-6 {}
 
-  .today {
+.simple-calendar .today {
     background: #FFFFC0
   }
 
-  .past {}
-  .future {}
+.simple-calendar .past {}
+.simple-calendar .future {}
 
-  .start-date {}
+.simple-calendar .start-date {}
 
-  .prev-month {
+.simple-calendar .prev-month {
     background: #DDD;
   }
-  .next-month {
+.simple-calendar .next-month {
     background: #DDD;
   }
-  .current-month {}
+.simple-calendar .current-month {}
 
-  .has-events {}
-}
+.simple-calendar .has-events {}
