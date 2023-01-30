@@ -65,6 +65,14 @@ class PagesController < ApplicationController
     end
   end
 
+  def panel
+    @user = current_user
+    puts "\n\n\n\n\n\n\n\n\n\n\n\n\n"
+    puts @user
+    puts current_user
+    puts "\n\n\n\n\n\n\n\n\n\n\n\n\n"
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_page

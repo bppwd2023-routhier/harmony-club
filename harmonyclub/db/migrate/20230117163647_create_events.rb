@@ -3,6 +3,7 @@ class CreateEvents < ActiveRecord::Migration[7.0]
     create_table :events do |t|
       t.string :title
       t.boolean :allday
+      t.boolean :featured
       t.datetime :eventstart
       t.datetime :eventend
       t.integer :occurence
