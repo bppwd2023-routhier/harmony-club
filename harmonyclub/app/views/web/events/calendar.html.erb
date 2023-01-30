@@ -3,15 +3,19 @@
 <h3>Featured Events</h3>
 
 <div class="row">
-  <% @featured.each do |f| %>
-    <div class="col col-md-3">
-      <div class="card">
-        <div class="card-body">
-          <strong><%= f.title %></strong>
-          <p><%= f.details %></p>
+  <% if @featured.length == 0%>
+    <p> No Featured Events </p>
+  <% else %>
+    <% @featured.each do |f| %>
+      <div class="col col-md-3">
+        <div class="card">
+          <div class="card-body">
+            <strong><%= f.title %></strong>
+            <p><%= f.details %></p>
+          </div>
         </div>
       </div>
-    </div>
+    <% end %>
   <% end %>
 </div>
 
