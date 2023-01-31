@@ -1,8 +1,11 @@
+<div class="row">
+    <div class="col-12 space"></br></br></div>
+</div>
 <div class="row text-center"> 
     <div class="col col-lg-4">
-        <div class="card" style="width: 18rem;">
+        <div class="card mx-auto" style="width: 18rem;">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title">Photo Album</h5>
                 <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <%= link_to "Photo Album", albums_path %>
@@ -10,9 +13,9 @@
         </div>
     </div>
     <div class="col col-lg-4">
-        <div class="card" style="width: 18rem;">
+        <div class="card mx-auto" style="width: 18rem;">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title">Events</h5>
                 <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <%= link_to "Events", events_path %>
@@ -20,9 +23,9 @@
         </div>
     </div>
     <div class="col col-lg-4">
-        <div class="card" style="width: 18rem;">
+        <div class="card mx-auto" style="width: 18rem;">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title">Pages</h5>
                 <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <%= link_to "Pages", pages_path %>
@@ -30,34 +33,25 @@
         </div>
     </div>
 </div>
+<div class="row">
+    <div class="col-12 space"></br></br></div>
+</div>
 <div class="row text-center">
 
-    <div class="col col-lg-4">
-        <div class="card" style="width: 18rem;">
+    <div class="col col-lg-6">
+        <div class="card mx-auto" style="width: 18rem;">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title">Photos</h5>
                 <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <%= link_to "Photos", photos_path %>
             </div>
         </div>
     </div>
-    <% if @user != nil && @user.dev %>
-    <div class="col col-lg-4">
-        <div class="card" style="width: 18rem;">
+    <div class="col col-lg-6">
+        <div class="card mx-auto" style="width: 18rem;">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <%= link_to "Sections", sections_path %>
-            </div>
-        </div>
-    </div>
-    <% end %>
-    <div class="col col-lg-4">
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title">Sponsors</h5>
                 <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <%= link_to "Sponsors", sponsors_path %>
@@ -65,3 +59,20 @@
         </div>
     </div>
 </div>
+<div class="row">
+    <div class="col-12 space"></br></br></div>
+</div>
+<% if @user != nil && @user.dev %>
+    <div class="row text-center">
+        <div class="col col-lg-6">
+            <div class="card mx-auto" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Sections</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <%= link_to "Sections", sections_path %>
+                </div>
+            </div>
+        </div>
+    </div>
+<% end %>
