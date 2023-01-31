@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+    include Pundit::Authorization
     before_action :all_sections
 
     def all_sections
