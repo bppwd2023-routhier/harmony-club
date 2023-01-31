@@ -2,6 +2,15 @@
     background-color: #00075E;
 }
 
+.navbar-brand{
+  color: white !important;
+  font-size: 1.75em !important;
+}
+
+.field_with_errors {
+  background-color: rgb(255, 122, 144);
+}
+
 .red {
     background-color: #B22234;
 }
