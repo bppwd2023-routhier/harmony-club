@@ -28,7 +28,7 @@
 
   <div>
     <%= form.label :page_type, style: "display: block" %>
-    <%= form.text_field :page_type %>
+    <%= form.select :page_type, ["Basic Page", "External URL", "Internal URL", "PDF"] %>
   </div>
 
   <div>
