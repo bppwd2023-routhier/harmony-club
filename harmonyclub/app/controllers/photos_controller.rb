@@ -4,6 +4,7 @@ class PhotosController < ApplicationController
   # GET /photos or /photos.json
   def index
     @photos = Photo.all
+    authorize :general, :signed_in?
   end
 
   # GET /photos/1 or /photos/1.json
@@ -13,6 +14,7 @@ class PhotosController < ApplicationController
   # GET /photos/new
   def new
     @photo = Photo.new
+    authorize :general, :signed_in?
   end
 
   # GET /photos/1/edit
@@ -61,6 +63,7 @@ class PhotosController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_photo
       @photo = Photo.find(params[:id])
+      authorize :general, :signed_in?
     end
 
     # Only allow a list of trusted parameters through.

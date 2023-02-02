@@ -4,6 +4,7 @@ class SectionsController < ApplicationController
   # GET /sections or /sections.json
   def index
     @sections = Section.all
+    authorize @sections, :section?
   end
 
   # GET /sections/1 or /sections/1.json
@@ -13,6 +14,7 @@ class SectionsController < ApplicationController
   # GET /sections/new
   def new
     @section = Section.new
+    authorize @section, :section?
   end
 
   # GET /sections/1/edit
@@ -22,7 +24,7 @@ class SectionsController < ApplicationController
   # POST /sections or /sections.json
   def create
     @section = Section.new(section_params)
-
+    authorize @section
     respond_to do |format|
       if @section.save
         format.html { redirect_to section_url(@section), notice: "Section was successfully created." }
@@ -61,6 +63,7 @@ class SectionsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_section
       @section = Section.find(params[:id])
+      authorize @section, :section?
     end
 
     # Only allow a list of trusted parameters through.

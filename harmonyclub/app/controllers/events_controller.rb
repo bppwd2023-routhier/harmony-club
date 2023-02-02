@@ -4,6 +4,7 @@ class EventsController < ApplicationController
   # GET /events or /events.json
   def index
     @events = Event.all
+    authorize :general, :signed_in?
   end
 
   # GET /events/1 or /events/1.json
@@ -13,6 +14,7 @@ class EventsController < ApplicationController
   # GET /events/new
   def new
     @event = Event.new
+    authorize :general, :signed_in?
   end
 
   # GET /events/1/edit
@@ -61,6 +63,7 @@ class EventsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_event
       @event = Event.find(params[:id])
+      authorize :general, :signed_in?
     end
 
     # Only allow a list of trusted parameters through.
