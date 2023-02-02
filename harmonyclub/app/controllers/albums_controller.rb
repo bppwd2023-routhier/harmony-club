@@ -4,6 +4,7 @@ class AlbumsController < ApplicationController
   # GET /albums or /albums.json
   def index
     @albums = Album.all
+    authorize :general, :signed_in?
   end
 
   # GET /albums/1 or /albums/1.json
@@ -13,6 +14,7 @@ class AlbumsController < ApplicationController
   # GET /albums/new
   def new
     @album = Album.new
+    authorize :general, :signed_in?
   end
 
   # GET /albums/1/edit
@@ -61,6 +63,7 @@ class AlbumsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_album
       @album = Album.find(params[:id])
+      authorize :general, :signed_in?
     end
 
     # Only allow a list of trusted parameters through.

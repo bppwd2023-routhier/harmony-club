@@ -4,6 +4,7 @@ class SponsorsController < ApplicationController
   # GET /sponsors or /sponsors.json
   def index
     @sponsors = Sponsor.all
+    authorize :general, :signed_in?
   end
 
   # GET /sponsors/1 or /sponsors/1.json
@@ -13,6 +14,7 @@ class SponsorsController < ApplicationController
   # GET /sponsors/new
   def new
     @sponsor = Sponsor.new
+    authorize :general, :signed_in?
   end
 
   # GET /sponsors/1/edit
@@ -61,6 +63,7 @@ class SponsorsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_sponsor
       @sponsor = Sponsor.find(params[:id])
+      authorize :general, :signed_in?
     end
 
     # Only allow a list of trusted parameters through.

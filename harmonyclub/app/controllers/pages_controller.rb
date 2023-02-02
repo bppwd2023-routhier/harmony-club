@@ -5,13 +5,10 @@ class PagesController < ApplicationController
     @secions = Section.all
   end
 
-  def panel 
-
-  end
-
   # GET /pages or /pages.json
   def index
     @pages = Page.all
+    authorize :general, :signed_in?
   end
 
   # GET /pages/1 or /pages/1.json
@@ -21,6 +18,7 @@ class PagesController < ApplicationController
   # GET /pages/new
   def new
     @page = Page.new
+    authorize :general, :signed_in?
   end
 
   # GET /pages/1/edit
@@ -67,12 +65,14 @@ class PagesController < ApplicationController
 
   def panel
     @user = current_user
+    authorize :general, :signed_in?
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_page
       @page = Page.find(params[:id])
+      authorize :general, :signed_in?
     end
 
     # Only allow a list of trusted parameters through.
