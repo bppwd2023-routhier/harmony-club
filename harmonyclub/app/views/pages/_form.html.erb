@@ -11,42 +11,66 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
-  </div>
+  <div data-controller="pages">
+    <div>
+      <%= form.label :title, style: "display: block" %>
+      <%= form.text_field :title %>
+    </div>
 
-  <div>
-    <%= form.label :section_id, style: "display: block" %>
-    <%= form.number_field :section_id %>
-  </div>
+    <div>
+      <%= form.label :section_id, style: "display: block" %>
+      <%= form.number_field :section_id %>
+    </div>
 
-  <div>
-    <%= form.label :position, style: "display: block" %>
-    <%= form.number_field :position %>
-  </div>
+    <div>
+      <%= form.label :position, style: "display: block" %>
+      <%= form.number_field :position %>
+    </div>
 
-  <div>
-    <%= form.label :page_type, style: "display: block" %>
-    <%= form.select :page_type, ["Basic Page", "External URL", "Internal URL", "PDF"] %>
-  </div>
+    <div>
+      <%= form.label :page_type, style: "display: block" %>
+      <%= form.select :page_type,
+            [" ", "Basic Page", "External URL", "Internal URL", "PDF"],
+            {},
+            data: {
+              action: "change->pages#pageChange",
+              "pages-target": "box"
+            } %>
+    </div>
 
-  <div>
-    <%= form.label :destination, style: "display: block" %>
-    <%= form.text_field :destination %>
-  </div>
+    <div>
+      <%= form.label :destination, style: "display: block" %>
+      <%= form.text_field :destination %>
+    </div>
 
-  <div>
-    <%= form.label :visible, style: "display: block" %>
-    <%= form.check_box :visible %>
-  </div>
+    <div>
+      <%= form.label :visible, style: "display: block" %>
+      <%= form.check_box :visible %>
+    </div>
 
-  <div>
-    <%= form.label :content, style: "display: block" %>
-    <%= form.text_area :content %>
-  </div>
+    <div>
+      <%= form.label :content, style: "display: block" %>
+      <%= form.text_area :content %>
+    </div>
 
-  <div>
-    <%= form.submit %>
+    <div data-pages-target="fields">
+      <p>test target one</p>
+    </div>
+
+    <div data-pages-target="fields">
+      <p>test target two</p>
+    </div>
+
+    <div data-pages-target="fields">
+      <p>test target three</p>
+    </div>
+
+    <div data-pages-target="fields">
+      <p>test target four</p>
+    </div>
+
+    <div>
+      <%= form.submit %>
+    </div>
   </div>
 <% end %>
