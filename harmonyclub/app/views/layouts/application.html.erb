@@ -21,8 +21,8 @@
             <% end %>
             <% if current_user %>
             <%= link_to "Control Panel", panel_path, class:"nav-link" %>
-            <% end %>
-            <%= link_to "Home", home_path, class:"nav-link" %>
+            <%= link_to "Photo Albums", web_photos_index_path, class:"nav-link" %>
+            <%= link_to "Event Calendar", web_events_calendar_path, class:"nav-link" %>
 
             <% @sections.each do |n| %>
                 <%= n %>
