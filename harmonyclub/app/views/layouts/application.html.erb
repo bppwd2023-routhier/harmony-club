@@ -11,6 +11,14 @@
   </head>
 
   <body class="background">
+    <nav class="navbar red text-uppercase navbar-shrink">
+        <div class="container me-auto my-2">
+            <%= link_to "Harmony Club of Worcester", home_path, class: "navbar-brand text-uppercase h1 fw-bold fs-2" %>
+            <button class="navbar-toggle text-uppercase font-weight-bold menuButton text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span>Menu</span><span class="navbar-dark navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
     <div class="collapse" id="navbarToggleExternalContent">
         <div class="red p-4">
 
@@ -22,24 +30,14 @@
             <% if current_user %>
             <%= link_to "Control Panel", panel_path, class:"nav-link" %>
             <% end %>
-            <%= link_to "Photo Albums", web_photos_index_path, class:"nav-link" %>
-            <%= link_to "Event Calendar", web_events_calendar_path, class:"nav-link" %>
             
 
             <% @sections.each do |n| %>
-                <%= link_to n.title, n.location %>
+                <%= link_to n.title, n.location, class:"nav-link" %>
             <% end %>
 
         </div>
     </div>
-    <nav class="navbar red text-uppercase navbar-shrink">
-        <div class="container-fluid me-auto">
-            <%= link_to "Harmony Club of Worcester", home_path, class: "navbar-brand text-uppercase h1" %>
-            <button class="navbar-toggle ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
-    </nav>
     <div class="container">
         <% if notice %>
         <p class="alert alert-success"><%= notice %></p>
@@ -66,7 +64,7 @@
             <div class="row m-0 justify-content-center pt-1">
                 <% @sections.each do |n| %>
                     <div class="col-4 mb-3 text-center">
-                        <%= n.title %>
+                        <%= link_to n.title, n.location, class:"nav-link fw-bold fs-5" %>
                     </div>
                 <% end %>
             </div>
