@@ -1,11 +1,12 @@
 <h1 class="text-center headingTop">Photo Albums</h1>
 
 <% @albums.each do |a| %>
-    <div class="row text-center" >
+    <div class="row text-center img-thumbnail img-fluid" >
+        <div class="col-12 text-center">
         <h2><%= a.title %></h2> 
-
-        <%= image_tag (a.thumbnail), class: "thumbnail" %>
+        <%= image_tag (a.thumbnail), class: "thumbnail" %></br>
 
         <strong><%= link_to "View Album", web_albumPhoto_path(a) %></strong>
+        </div>
     </div>
 <% end %>
