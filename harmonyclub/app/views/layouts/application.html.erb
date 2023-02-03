@@ -26,7 +26,7 @@
             <%= link_to "Event Calendar", web_events_calendar_path, class:"nav-link" %>
 
             <% @sections.each do |n| %>
-                <%= n %>
+                <%= link_to n.title %>
             <% end %>
 
         </div>
