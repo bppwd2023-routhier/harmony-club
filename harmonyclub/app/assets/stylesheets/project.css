@@ -7,8 +7,20 @@
   font-size: 1.75em !important;
 }
 
+.thumbnail{
+  max-width: 350px;
+  max-height: 350px;
+}
+
+.headingTop {
+  margin: 5px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgb(228, 216, 216);
+}
+
 .field_with_errors {
   background-color: rgb(255, 122, 144);
+  color: red;
 }
 
 .red {
@@ -26,6 +38,10 @@
     width: 100%;
     bottom: 0;
     left: 0;
+}
+
+.form-hide {
+  visibility: hidden;
 }
 
 div {

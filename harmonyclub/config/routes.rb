@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   namespace :web do
     get 'photos/index'
-    get 'photos/show'
+    get 'photos/show/:id', to: "photos#show", as: "albumPhoto"
     get 'events/calendar'
     get 'events/show'
   end

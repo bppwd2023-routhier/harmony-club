@@ -1,2 +1,7 @@
-<h1>Web::Photos#show</h1>
-<p>Find me in app/views/web/photos/show.html.erb</p>
+<h1 class="headingTop text-center"><%= @album.title %> Photos</h1>
+
+<div>
+<% @album.photos.each do |p| %>
+    <%= image_tag (p.image) %>
+<% end %>
+</div>

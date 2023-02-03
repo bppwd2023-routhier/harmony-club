@@ -9,4 +9,11 @@
     <%= album.description %>
   </p>
 
+  <p>
+    <strong>Thumbnail:</strong>
+    <% if album.thumbnail.representable? %>
+    <%= image_tag (album.thumbnail) %>
+    <% end %>
+  </p>
+
 </div>
