@@ -27,7 +27,7 @@
             
 
             <% @sections.each do |n| %>
-                <%= n.title %>
+                <%= link_to n.title %>
             <% end %>
 
         </div>
@@ -55,11 +55,22 @@
             <div class="col-lg-2"></div>
         </div>
     </div>
-    <div class="red">
-        <span>bruh</span></br>
-        <span>bruh</span></br>
-        <span>bruh</span></br>
-        <span>bruh</span>
+
+
+
+    <div class="red text-light">
+        <div class=container-fluid">
+            <div class="text-center border-bottom border-light p-1">
+                <a class="text-light text-decoration-none" href="/">Harmony Club of Worcester | 2023</a>
+            </div>
+            <div class="row m-0 justify-content-center pt-1">
+                <% @sections.each do |n| %>
+                    <div class="col-4 mb-3 text-center">
+                        <%= n.title %>
+                    </div>
+                <% end %>
+            </div>
+        </div>
     </div>
     </body>
 </html>
