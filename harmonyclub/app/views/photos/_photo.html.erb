@@ -14,4 +14,14 @@
     <%= photo.description %>
   </p>
 
+  <p>
+    <% if photo.image.analyzed? %>
+      <p>true analyzed</p>
+    <% end %>
+    <% if photo.image.representable? %>
+      <p>true representable</p>
+      <%= link_to photo.image.filename, photo.image if photo.image.attached? %>
+    <% end %>
+  </p>
+
 </div>
