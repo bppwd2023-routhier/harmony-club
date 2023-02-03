@@ -2,6 +2,11 @@
     background-color: #00075E;
 }
 
+.menuButton {
+  background-color: #00075E !important;
+  border: none;
+}
+
 .navbar-brand{
   color: white !important;
   font-size: 1.75em !important;
